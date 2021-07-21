@@ -4,8 +4,8 @@ def mergeSort(array):
         left = array[:middle]  # Split array into 2
         right = array[middle:]
 
-        mergeSort(left)   # Sorting the first half
-        mergeSort(right)  # Sorting the second half
+        mergeSort(left)   # sorting the first half
+        mergeSort(right)  # sorting the second half
     
 
         # Copy data to temp arrays L[] and R[]
@@ -22,7 +22,7 @@ def merge(array, left, right):
             array[k] = right[j]
             j += 1
         k += 1
-    # Checking if any element was left
+    # Checking if any element are left from either array
     while i < len(left):
         array[k] = left[i]
         i += 1

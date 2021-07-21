@@ -1,7 +1,6 @@
-class template {
+class Tem {
 
-    public static void main(String[] args) {
-        System.out.println("This is a template");   
+    fun main(args : Array<String>) {
+        println("This is a template");
     }
-
 }
