@@ -6,14 +6,14 @@ def mergeSort(array):
 
         mergeSort(left)   # Sorting the first half
         mergeSort(right)  # Sorting the second half
-        
-        i = j = k = 0
+    
 
         # Copy data to temp arrays L[] and R[]
-        merge(array, i, j, k, left, right)
+        merge(array, left, right)
 
 
-def merge(array, i, j, k, left, right):
+def merge(array, left, right):
+    i = j = k = 0
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
             array[k] = left[i]
@@ -31,3 +31,7 @@ def merge(array, i, j, k, left, right):
         array[k] = right[j]
         j += 1
         k += 1
+if __name__ == "__main__":
+    alist = [54,26,93,17,77,31,44,55,20]
+    mergeSort(alist)
+    print(alist)
